@@ -1,0 +1,19 @@
+{
+  "name": "es-test",
+  "version": "1.0.0",
+  "description": "elastichsearch test",
+  "main": "index.js",
+  "author": "Eddy, Lei Sio Kei",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "search": "node search.js"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  }
+}
