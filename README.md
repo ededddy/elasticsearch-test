@@ -1,4 +1,4 @@
-# NOTES
+# Experiments on ElasticSearch
 
 ## Tested Mapping
 
