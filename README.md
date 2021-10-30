@@ -61,4 +61,4 @@ I will only paste the install guides, no specific OS, but I use WSL2 so good luc
 2. https://www.elastic.co/guide/en/kibana/current/install.html
 3. https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
 4. https://blog.csdn.net/zzqaaasss/article/details/104223480
-5. https://github.com/medcl/elasticsearch-analysis-ik``````
+5. https://github.com/medcl/elasticsearch-analysis-ik
