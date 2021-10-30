@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "portuguese_stop": {
+          "type": "stop",
+          "stopwords": "_portuguese_"
+        },
+        "portuguese_stemmer": {
+          "type": "stemmer",
+          "language": "light_portuguese"
+        }
+      },
+      "analyzer": {
+        "rebuilt_portugese": {
+          "tokenizer": "standard",
+          "filter": ["lowercase", "portuguese_stop", "portuguese_stemmer"]
+        },
+        "default": {
+          "type": "ik_max_word"
+        },
+        "default_search": {
+          "type": "ik_smart"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "zh": {
+        "type": "text",
+        "store": "true"
+      },
+      "pt": {
+        "type": "text",
+        "store": "true",
+        "analyzer": "rebuilt_portugese",
+        "search_analyzer": "rebuilt_portugese"
+      },
+      "zh_remark": {
+        "type": "text",
+        "store": "true"
+      },
+      "pt_remark": {
+        "type": "text",
+        "store": "true",
+        "analyzer": "rebuilt_portugese",
+        "search_analyzer": "rebuilt_portugese"
+      }
+    }
+  }
+}

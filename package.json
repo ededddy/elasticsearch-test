@@ -7,11 +7,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "search": "node search.js"
+    "add_cases": "node cases.js",
+    "add_laws": "node laws.js",
+    "search": "node search.js",
+    "create_indices": "node create.js"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^7.15.0"
+    "@elastic/elasticsearch": "^7.15.0",
+    "dotenv": "^10.0.0",
+    "node-fetch": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.1.0"

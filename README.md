@@ -1,57 +1,30 @@
-# Experiments on ElasticSearch
+# Experimental ElasticSearch setup in JavaScript
 
-## Tested Mapping
+## Available Scripts
 
-```
-PUT cases
-{
-  "mappings" : {
-    "properties": {
-      "zh_content":{
-        "type": "text",
-        "store": true,
-        "analyzer": "ik_max_word",
-        "search_analyzer": "ik_smart"
-      },
-      "pt_content": {
-        "type": "text",
-        "store": true,
-        "analyzer": "ik_max_word",
-        "search_analyzer": "ik_smart"
-      }
-    }
-  }
-}
+- Create cases & laws indices
+
+```shell
+yarn run add_cases
+# or
+npm run add_cases
 ```
 
-## Tested Query
+- Add cases
 
-Used terms : 自衛, 濫用武力, 有失尊嚴或欠缺道德的品行, 接受停職或更嚴厲的紀律處分
-
-```
-GET cases/_search
-{
-  "query": {
-    "match_phrase": {
-      "zh_content" : {
-        "query": "接受停職或更嚴厲的紀律處分",
-        "analyzer": "ik_smart"
-      }
-    }
-  },
-  "highlight": {
-    "fields": {
-      "zh_content": {}
-    }
-  }
-}
+```shell
+yarn run add_cases
+# or
+npm run add_cases
 ```
 
-Results :
-1008 documents each with ~ 2000 to 13000 words
+- Add laws
 
-- sub 100 ms is achievable
-- worst seen is about 1.7 seconds.
+```shell
+yarn run add_laws
+# or
+npm run add_laws
+```
 
 # Referenced Sites
 
