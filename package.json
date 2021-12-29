@@ -10,11 +10,13 @@
     "add_cases": "node cases.js",
     "add_laws": "node laws.js",
     "search": "node search.js",
-    "create_indices": "node create.js"
+    "create_indices": "node create.js",
+    "delete_indices": "node delete.js"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.15.0",
     "dotenv": "^10.0.0",
+    "moment": "^2.29.1",
     "node-fetch": "^3.0.0"
   },
   "devDependencies": {

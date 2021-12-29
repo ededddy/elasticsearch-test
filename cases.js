@@ -1,5 +1,6 @@
 const client = require("./connection.js");
 const data = require("./transformedCaseLaws.json");
+const moment = require("moment");
 
 const main = async () => {
 	const regx = new RegExp(/\r?\n|\r|\t/g);
@@ -29,7 +30,7 @@ const main = async () => {
 			const ready = {
 				id: id++,
 				case_num: num,
-				date,
+				date : moment(date, "DD/MM/YYYY").unix(),
 				caseType: ty,
 				voting,
 				result,
